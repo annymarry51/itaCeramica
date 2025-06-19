@@ -1,0 +1,107 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+.FlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    background-color: #ae97e4;
+    overflow: auto;
+    flex-direction: row;
+}
+
+.FlexContainer div {
+    width: 40%;
+    height: 60%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: lightblue;
+}
+
+.FlexContainer article{
+    width: auto;
+    height: auto;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 480px) {
+    .FlexContainer div {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 8px 0;
+    }
+
+    form input, form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    }
+
+
+    h1, h2{
+        font-size: 1.2rem;
+    }
+
+    nav a{
+        display: block;
+        margin: 5px 0;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .FlexContainer div {
+    max-width: 100%;
+    margin: 2.5%;
+    }
+
+    h1, h2{
+        font-size: 2.2rem;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+body{
+    background-color: lightblue;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    color: rgba(71, 2, 20, 0.938);
+}
+
+h2{
+    color: rgba(1, 36, 10, 0.938);
+    text-align: center;
+    margin: 2%;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+a{
+    color:green;
+}
+p{
+    text-align: center;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
