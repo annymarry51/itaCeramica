@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
 </head>
-<body>
-    </head>
 <body>
     <header>
         <h1>ItaCeramica</h1>
@@ -17,19 +16,31 @@
     </header>
 <section class='FlexContainer'>
     <br>
-    <form action="mailto:anamariadecravalhomendonca51@gmail.com" method="post" enctype="text/plain">
+    <form ng-app="meu" ng-controller="validar" name="meuForm"
+     action="mailto:anamariadecravalhomendonca51@gmail.com" method="post" enctype="text/plain">
+        <p></p>
+
         <label for="Nome">Nome</label><br>
-        <input type="text" name="Nome" size="60"><br>
+        <input type="text" name="Nome" ng-model="usuario.Nome" size="60" required
+        oninvalid="this.setCustomValidity('Informe seu nome, por favor!')"
+        oninput="this.setCustomValidity('')">
+        <br>
+
         <label for="E-mail">E-mail</label><br>
-        <input type="text" name="E-mail" size="60"><br><br>
+        <input type="text" name="Email" ng-model="usuario.Email" size="60" required
+        oninvalid="this.setCustomValidity('Informe seu E-mail, por favor!')"
+        oninput="this.setCustomValidity('')"><br><br>
+
         <label for="Mensagem">Mensagem</label><br>
-        <textarea name="mensagem"  required></textarea><br>
+        <textarea name="mensagem" ng-model="usuario.mensagem"  required
+        oninvalid="this.setCustomValidity('Escreva uma mensagem, por favor!')"
+        oninput="this.setCustomValidity('')">></textarea><br><br>
+
         <input type="submit" value="Enviar">
         <input type="reset" value="Cancelar">
+        <p></p>
     </form>
 </section>
-
-</form>
     <footer>
         <p>&copy; 2025 ItaCeramica. Todos os direitos reservados.</p>
     </footer>
